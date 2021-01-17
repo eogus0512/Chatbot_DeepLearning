@@ -6,7 +6,7 @@ f = open("../train_tools/dict/chatbot_dict.bin", "rb")
 word_index = pickle.load(f)
 f.close()
 
-sent = "내일 오전 10시에 탕수육 주문하고 싶어 ㅋㅋ"
+sent = "내일 오전 10시에 탕수육 예약하고 싶어 ㅋㅋ"
 
 # 전처리 객체 생성
 p = Preprocess(userdic='../utils/user_dic.tsv')

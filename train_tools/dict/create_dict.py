@@ -16,7 +16,7 @@ def read_corpus_data(filename):
 corpus_data = read_corpus_data('corpus.txt')
 
 
-# 망뭉치 데이터에서 키워드만 추출해서 사전 리스트 생성
+# 말뭉치 데이터에서 키워드만 추출해서 사전 리스트 생성
 p = Preprocess()
 dict = []
 for c in corpus_data:
