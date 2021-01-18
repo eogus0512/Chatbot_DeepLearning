@@ -16,7 +16,7 @@ try:
       id INT UNSIGNED NOT NULL AUTO_INCREMENT,
       intent VARCHAR(45) NULL,
       ner VARCHAR(1024) NULL,
-      query TEXT NULL,
+      food TEXT NULL,
       answer TEXT NOT NULL,
       answer_image VARCHAR(2048) NULL,
       PRIMARY KEY (`id`))

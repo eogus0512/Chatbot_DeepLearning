@@ -12,10 +12,10 @@ db = Database(
 db.connect()    # 디비 연결
 
 # 원문
-# query = "오전에 탕수육 10개 주문합니다"
+# query = "점심으로 피자 먹을 건데 맛있는 곳 알려줘"
 # query = "화자의 질문 의도를 파악합니다."
 # query = "안녕하세요"
-query = "안녕 ㅎㅎ 반가워!!"
+query = "나 오늘 뭐먹을지 고민이야 ㅠㅠ"
 
 # 의도 파악
 from models.intent.IntentModel import IntentModel
@@ -41,11 +41,11 @@ from utils.FindAnswer import FindAnswer
 
 try:
     f = FindAnswer(db)
-    answer_text, answer_image = f.search(intent_name, ner_tags)
+    answer_text, answer_image = f.search(intent_name, ner_tags, predicts)
     answer = f.tag_to_word(predicts, answer_text)
 except:
     answer = "죄송해요 무슨 말인지 모르겠어요"
 
-print("답변 : ", answer)
+print("답변 : ", answer, answer_image)
 
 db.close() # 디비 연결 끊음

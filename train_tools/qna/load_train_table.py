@@ -21,21 +21,21 @@ def all_clear_train_data(db):
 
 # db에 데이터 저장
 def insert_data(db, xls_row):
-    intent, ner, query, answer, answer_img_url = xls_row
+    intent, ner, food, answer, answer_img_url = xls_row
 
     sql = '''
-        INSERT train_table(intent, ner, query, answer, answer_image) 
+        INSERT train_table(intent, ner, food, answer, answer_image) 
         values(
          '%s', '%s', '%s', '%s', '%s'
         )
-    ''' % (intent.value, ner.value, query.value, answer.value, answer_img_url.value)
+    ''' % (intent.value, ner.value, food.value, answer.value, answer_img_url.value)
 
     # 엑셀에서 불러온 cell에 데이터가 없는 경우, null 로 치환
     sql = sql.replace("'None'", "null")
 
     with db.cursor() as cursor:
         cursor.execute(sql)
-        print('{} 저장'.format(query.value))
+        print('{} 저장'.format(food.value))
         db.commit()
 
 
