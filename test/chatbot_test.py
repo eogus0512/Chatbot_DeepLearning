@@ -15,7 +15,7 @@ db.connect()    # 디비 연결
 # query = "점심으로 피자 먹을 건데 맛있는 곳 알려줘"
 # query = "화자의 질문 의도를 파악합니다."
 # query = "안녕하세요"
-query = "나 오늘 뭐먹을지 고민이야 ㅠㅠ"
+query = "스테이크 맛있는 곳 추천해줘"
 
 # 의도 파악
 from models.intent.IntentModel import IntentModel

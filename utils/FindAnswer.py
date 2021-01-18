@@ -20,7 +20,6 @@ class FindAnswer:
                         where += " and ( food like '%{}%' )".format(word)
 
             sql = sql + where
-            print(sql)
 
         # 동일한 답변이 2개 이상인 경우, 랜덤으로 선택
         sql = sql + " order by rand() limit 1"
