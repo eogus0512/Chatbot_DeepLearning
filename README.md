@@ -4,10 +4,12 @@
 
 
 
+
 ## Project Introduction
 - 목적 : 동국대학교 학생들에게 동국대학교 주변 맛집을 찾아 추천해주는 대화형 챗봇 개발
 - 사용 언어 : PYTHON
 - 주요 패키지 : tensorflow, pandas, tkinter
+
 
 
 
