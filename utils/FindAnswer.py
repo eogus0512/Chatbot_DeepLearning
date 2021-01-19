@@ -23,6 +23,7 @@ class FindAnswer:
 
         # 동일한 답변이 2개 이상인 경우, 랜덤으로 선택
         sql = sql + " order by rand() limit 1"
+        print(sql)
         return sql
 
     # 답변 검색
@@ -33,8 +34,12 @@ class FindAnswer:
 
         # 검색되는 답변이 없으면 의도명만 검색
         if answer is None:
-            sql = self._make_query(intent_name, None, None)
-            answer = self.db.select_one(sql)
+            if intent_name == '음식점추천':
+                answer['answer'] = "해당 음식 맛집을 찾지 못했어요 ㅠㅠ 다른 음식을 입력해주세요"
+                answer['answer_image'] = ' '
+            else:
+                sql = self._make_query(intent_name, None, None)
+                answer = self.db.select_one(sql)
 
         return (answer['answer'], answer['answer_image'])
 
