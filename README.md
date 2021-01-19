@@ -10,20 +10,24 @@
 ### Project Description
 - 인사
 
-![인사](./images/인사.JPG)
+  ![인사](./images/인사.JPG)
+
 
 - 욕설
 
-![욕설](./images/욕설.JPG)
+  ![욕설](./images/욕설.JPG)
+
 
 - 음식추천
 
-![음식추천](./images/음식추천.JPG)
+  ![음식추천](./images/음식추천.JPG)
+
 
 - 음식점추천
 
-![음식점추천](./images/음식점추천.JPG)
+  ![음식점추천](./images/음식점추천.JPG)
+
 
 - GUI 및 사용예시
 
-![사용예시](./images/사용예시.JPG)
+  ![사용예시](./images/사용예시.JPG)
